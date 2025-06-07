@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Help Desk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Hospital Help Desk</h1>
+
+        <form action="/addPatient" method="post">
+            <h2>Add New Patient</h2>
+            <input type="text" name="pname" placeholder="Patient Name" required>
+            <input type="number" name="age" placeholder="Patient Age" required>
+            <input type="text" name="pdiesease" placeholder="Disease" required>
+            <button type="submit">Add Patient</button>
+        </form>
+
+        <form action="/searchPatient" method="get">
+            <h2>Search Patient</h2>
+            <input type="number" name="pid" placeholder="Patient ID" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <form action="/deletePatient" method="post">
+            <h2>Check Out Patient</h2>
+            <input type="number" name="pid" placeholder="Patient ID" required>
+            <button type="submit">Delete</button>
+        </form>
+
+        <form action="/updateDisease" method="post">
+            <h2>Update Patient Disease</h2>
+            <input type="number" name="pid" placeholder="Patient ID" required>
+            <input type="text" name="newDisease" placeholder="New Disease" required>
+            <button type="submit">Update</button>
+        </form>
+
+        <form action="/allPatients" method="get">
+            <h2>Show All Patients</h2>
+            <button type="submit">View All</button>
+        </form>
+    </div>
+</body>
+</html>
